@@ -1,7 +1,7 @@
 package com.company.day1024;
 
 /**
- * 股票交易的最大收益
+ * 股票交易的最大收益2
  */
 public class MaxProfit2_Solution {
     /**
@@ -12,10 +12,18 @@ public class MaxProfit2_Solution {
      * @return int整型
      */
     public static int maxProfit(int[] prices) {
-        if (prices==null||prices.length<=1){
+        if (prices == null || prices.length <= 1) {
             return 0;
         }
-
+        int dp_i10 = 0, dp_i11 = Integer.MIN_VALUE;
+        int dp_i20 = 0, dp_i21 = Integer.MIN_VALUE;
+        for (int price : prices) {
+            dp_i20 = Math.max(dp_i20, dp_i21 + price);
+            dp_i21 = Math.max(dp_i21, dp_i10 - price);
+            dp_i10 = Math.max(dp_i10, dp_i11 + price);
+            dp_i11 = Math.max(dp_i11, -price);
+        }
+        return dp_i20;
     }
 
     public static void main(String[] args) {
