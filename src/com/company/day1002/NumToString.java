@@ -1,5 +1,8 @@
 package com.company.day1002;
 
+/**
+ * 把数字翻译成字符串
+ */
 public class NumToString {
     /**
      * 解码
