@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 /**
+ * 栈和排序
  * @author epngxnz
  */
 public class StackAndSort_Solution {

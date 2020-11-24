@@ -2,35 +2,36 @@ package com.company.day1015;
 
 import com.company.util.TreeNode;
 
-import java.util.Stack;
-
 public class KthNode_Solution {
-    static Stack<TreeNode> stack1 = new Stack<TreeNode>();
+    /**
+     * 二叉搜索树的第k个节点
+     * 二叉搜索树的中序遍历就是树节点值得递增排列
+     *
+     * @param pRoot
+     * @param k
+     * @return
+     */
+    static TreeNode kNode = null;
+    static int count = 0;
 
     private static TreeNode KthNode(TreeNode pRoot, int k) {
-        inOrder(pRoot);
-        int len = stack1.size();
-        int i; //栈，队列，列表的长度均用size;
-        if (len == 0 || k == 0) {
+        if (pRoot == null || k <= 0) {
             return null;
         }
-        if (len < k) {
-            return null;
-        }
-        for (i = 1; i <= len - k; i++) {
-            stack1.pop();
-        }
-        TreeNode node = stack1.pop();
-        return node;
+        inOrder(pRoot, k);
+        return kNode;
     }
 
-    public static void inOrder(TreeNode root) {
-        if (root == null) {
-            return;
+    public static void inOrder(TreeNode root, int k) {
+        if (count < k && root.left != null) {
+            inOrder(root.left, k);
         }
-        inOrder(root.left);
-        stack1.push(root);
-        inOrder(root.right);
+        if (++count == k) {
+            kNode = root;
+        }
+        if (count < k && root.right != null) {
+            inOrder(root.right, k);
+        }
     }
 
     public static void main(String[] args) {

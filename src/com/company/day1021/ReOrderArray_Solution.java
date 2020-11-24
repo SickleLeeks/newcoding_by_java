@@ -4,9 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ReOrderArray_Solution {
+    /**
+     * 调整数组顺序使奇数位于偶数前面
+     * @param array
+     * @return
+     */
     public static int[] reOrderArray(int[] array) {
         if (array == null || array.length == 0) {
-            return new int[]{};
+            return array;
         }
         ArrayList<Integer> odd = new ArrayList<>();
         ArrayList<Integer> even = new ArrayList<>();
@@ -17,12 +22,13 @@ public class ReOrderArray_Solution {
                 odd.add(value);
             }
         }
-        odd.addAll(even);
-        int[] res = new int[odd.size()];
-        for (int i = 0; i < res.length; i++) {
-            res[i] = odd.get(i);
+        for (int i = 0; i < odd.size(); i++) {
+            array[i] = odd.get(i);
         }
-        return res;
+        for (int i = 0; i < even.size(); i++) {
+            array[i+odd.size()] = even.get(i);
+        }
+        return array;
     }
 
     public static void main(String[] args) {
