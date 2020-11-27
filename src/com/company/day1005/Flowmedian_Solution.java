@@ -135,6 +135,64 @@ public class Flowmedian_Solution {
     public static void main(String[] args) {
         int[][] oper = new int[][]{{1, 5}, {2}, {1, 3}, {2}, {1, 6}, {2}, {1, 7}, {2}};
         int[][] oper2 = new int[][]{{2}, {1, 1}, {2}};
-        System.out.println(Arrays.toString(flowmedian(oper)));
+        System.out.println(Arrays.toString(flowmedian2(oper)));
+    }
+
+    /**
+     * 随时找到数据流的中位数
+     *
+     * @param operations
+     * @return
+     */
+    // 通过率 100%
+    public static double[] flowmedian2(int[][] operations) {
+        ArrayList<Double> arr = new ArrayList<>();
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2 - o1;
+            }
+        });
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1 - o2;
+            }
+        });
+        for (int[] oper : operations) {
+            if (oper[0] == 1) {
+                if (maxHeap.isEmpty() || maxHeap.peek() > oper[1]) {
+                    maxHeap.add(oper[1]);
+                } else {
+                    minHeap.add(oper[1]);
+                }
+                if (minHeap.size() == maxHeap.size() + 2) {
+                    maxHeap.add(minHeap.poll());
+                }
+                if (maxHeap.size() == minHeap.size() + 2) {
+                    minHeap.add(maxHeap.poll());
+                }
+            } else {
+                if (maxHeap.size() == 0) {
+                    double ans = -1;
+                    arr.add(ans);
+                    continue;
+                }
+                if (maxHeap.size() == minHeap.size()) {
+                    double num1 = maxHeap.peek();
+                    double num2 = minHeap.peek();
+                    arr.add((num1 + num2) / 2);
+                } else {
+                    if (maxHeap.size() > minHeap.size()) {
+                        double num1 = maxHeap.peek();
+                        arr.add(num1);
+                    } else {
+                        double num2 = minHeap.peek();
+                        arr.add(num2);
+                    }
+                }
+            }
+        }
+        return arr.stream().mapToDouble(Double::doubleValue).toArray();
     }
 }
