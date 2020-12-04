@@ -1,4 +1,4 @@
-package com.nc.util;
+package com.util;
 
 public class ListNode {
     public ListNode next;

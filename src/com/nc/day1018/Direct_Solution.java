@@ -1,6 +1,6 @@
 package com.nc.day1018;
 
-import com.nc.util.Interval;
+import com.util.Interval;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.nc.util;
+package com.util;
 
 public class Interval {
     public int start = 0;

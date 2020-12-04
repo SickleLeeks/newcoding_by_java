@@ -1,6 +1,6 @@
 package com.nc.day1006;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 /**
  * 链表内指定区间反转

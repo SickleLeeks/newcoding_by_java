@@ -1,6 +1,6 @@
 package com.nc.day1015;
 
-import com.nc.util.Interval;
+import com.util.Interval;
 
 import java.util.*;
 

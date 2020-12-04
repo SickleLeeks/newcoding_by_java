@@ -1,6 +1,6 @@
 package com.jz.day1102;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 import java.util.ArrayList;
 import java.util.Stack;

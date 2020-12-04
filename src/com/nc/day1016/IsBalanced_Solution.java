@@ -1,6 +1,6 @@
 package com.nc.day1016;
 
-import com.nc.util.TreeNode;
+import com.util.TreeNode;
 
 /**
  * 是否为平衡二叉树

@@ -1,6 +1,6 @@
 package com.nc.day1011;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;

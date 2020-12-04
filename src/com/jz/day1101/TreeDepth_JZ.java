@@ -1,6 +1,6 @@
 package com.jz.day1101;
 
-import com.nc.util.TreeNode;
+import com.util.TreeNode;
 
 public class TreeDepth_JZ {
     /**

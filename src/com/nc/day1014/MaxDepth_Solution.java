@@ -1,6 +1,6 @@
 package com.nc.day1014;
 
-import com.nc.util.TreeNode;
+import com.util.TreeNode;
 
 public class MaxDepth_Solution {
     /**

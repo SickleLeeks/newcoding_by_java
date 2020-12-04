@@ -1,6 +1,6 @@
 package com.nc.day1014;
 
-import com.nc.util.TreeNode;
+import com.util.TreeNode;
 
 /**
  * 操作给定的二叉树，将其变换为源二叉树的镜像。

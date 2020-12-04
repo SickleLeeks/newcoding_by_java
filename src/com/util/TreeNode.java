@@ -1,4 +1,4 @@
-package com.nc.util;
+package com.util;
 
 public class TreeNode {
     public int val = 0;

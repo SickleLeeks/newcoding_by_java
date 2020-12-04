@@ -1,6 +1,6 @@
 package com.nc.day1025;
 
-import com.nc.util.TreeNode;
+import com.util.TreeNode;
 
 import java.util.ArrayList;
 

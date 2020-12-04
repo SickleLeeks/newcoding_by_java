@@ -1,7 +1,7 @@
 package com.nc.day1019;
 
 
-import com.nc.util.TreeNode;
+import com.util.TreeNode;
 
 public class MergeTrees_Solution {
     /**

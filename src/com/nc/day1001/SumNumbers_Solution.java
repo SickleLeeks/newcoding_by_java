@@ -1,6 +1,6 @@
 package com.nc.day1001;
 
-import com.nc.util.TreeNode;
+import com.util.TreeNode;
 
 /**
  * 二叉树根节点到叶子节点的所有路径表示的数字之和

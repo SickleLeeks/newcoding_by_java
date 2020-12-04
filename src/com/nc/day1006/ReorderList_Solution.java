@@ -1,6 +1,6 @@
 package com.nc.day1006;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

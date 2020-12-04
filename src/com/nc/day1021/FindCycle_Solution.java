@@ -1,6 +1,6 @@
 package com.nc.day1021;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 /**
  * 判断给定的链表中是否有环

@@ -1,6 +1,6 @@
 package com.jz.day1103;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 public class Merge_JZ {
     /**

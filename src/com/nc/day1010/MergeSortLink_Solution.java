@@ -1,6 +1,6 @@
 package com.nc.day1010;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 /**
  * 合并有序链表

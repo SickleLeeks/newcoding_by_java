@@ -1,6 +1,6 @@
 package com.nc.day1009;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 public class SelectSort_Solution {
     /**

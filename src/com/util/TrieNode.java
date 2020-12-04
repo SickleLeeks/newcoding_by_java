@@ -1,4 +1,4 @@
-package com.nc.util;
+package com.util;
 
 import java.util.HashMap;
 

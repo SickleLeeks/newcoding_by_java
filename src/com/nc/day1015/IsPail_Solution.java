@@ -1,6 +1,6 @@
 package com.nc.day1015;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 import java.util.Stack;
 

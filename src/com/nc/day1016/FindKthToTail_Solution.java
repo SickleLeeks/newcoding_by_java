@@ -1,6 +1,6 @@
 package com.nc.day1016;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 public class FindKthToTail_Solution {
     public static ListNode FindKthToTail(ListNode head, int k) {

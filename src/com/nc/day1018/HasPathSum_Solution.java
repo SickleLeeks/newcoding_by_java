@@ -1,6 +1,6 @@
 package com.nc.day1018;
 
-import com.nc.util.TreeNode;
+import com.util.TreeNode;
 
 public class HasPathSum_Solution {
     /**

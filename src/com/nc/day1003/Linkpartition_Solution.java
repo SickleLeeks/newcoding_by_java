@@ -1,6 +1,6 @@
 package com.nc.day1003;
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,7 +1,7 @@
 package com.nc.day1009;
 
 
-import com.nc.util.ListNode;
+import com.util.ListNode;
 
 import java.util.Stack;
 
