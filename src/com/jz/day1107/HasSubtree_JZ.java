@@ -11,17 +11,35 @@ public class HasSubtree_JZ {
      * @return
      */
     public static boolean HasSubtree(TreeNode root1, TreeNode root2) {
-        if (root1 == null && root2 == null) {
-            return true;
-        } else if (root1 == null ^ root2 == null) {
+        if (root2 == null) {
             return false;
-        } else {
-            if (root1.val == root2.val) {
-                return HasSubtree(root1.left, root2.left);
-            } else {
-                return HasSubtree(root1.left, root2) || HasSubtree(root1.right, root2);
+        }
+        return findSubTreeRoot(root1, root2);
+    }
+
+    private static boolean findSubTreeRoot(TreeNode root1, TreeNode root2) {
+        if (root1 == null) {
+            return false;
+        }
+        if (root1.val == root2.val) {
+            if (solve(root1, root2)) {
+                return true;
             }
         }
+        return findSubTreeRoot(root1.left, root2) || findSubTreeRoot(root1.right, root2);
+    }
+
+    private static boolean solve(TreeNode root1, TreeNode root2) {
+        if (root2 == null) {
+            return true;
+        }
+        if (root1 == null) {
+            return false;
+        }
+        if (root1.val == root2.val) {
+            return solve(root1.left, root2.left) && solve(root1.right, root2.right);
+        }
+        return false;
     }
 
     public static void main(String[] args) {
