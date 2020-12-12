@@ -1,5 +1,8 @@
-package com.jz.day1109;
+package com.play.day1204;
 
+/**
+ * 音符选取
+ */
 public class BangBang {
     /**
      * @param n int整型 乐谱总音符数

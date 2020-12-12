@@ -1,4 +1,4 @@
-package com.jz.day1109;
+package com.classical;
 
 public class KnapStack01 {
     /**

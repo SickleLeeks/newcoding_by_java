@@ -1,4 +1,4 @@
-package com.jz.day1109;
+package com.classical;
 
 import java.math.BigInteger;
 import java.util.Scanner;

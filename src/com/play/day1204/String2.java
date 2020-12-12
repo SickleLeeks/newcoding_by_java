@@ -1,5 +1,6 @@
-package com.jz.day1109;
+package com.play.day1204;
 
+//字符串转换
 public class String2 {
     /**
      * @param k int整型 表示最多的操作次数
@@ -17,7 +18,7 @@ public class String2 {
         }
         int i = 0, max = Integer.MIN_VALUE;
         while (i < 26) {
-            int count = 0,tmp = k;
+            int count = 0, tmp = k;
             for (int j = 0; j < num.length; j++) {
                 if (num[j] != i && count + Math.abs(num[j] - i) < k) {
                     count++;
