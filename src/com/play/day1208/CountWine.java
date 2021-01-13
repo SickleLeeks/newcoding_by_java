@@ -14,7 +14,26 @@ public class CountWine {
             return 0;
         }
         int count = 0;
-        int
+        int numPing, numGai;
+        numPing = numGai = n / m;
+        count += numPing;
+        while (numPing >= 2 || numGai >= 4) {
+            if (numPing >= 2) {
+                int temp1 = numPing / 2;
+                int temp2 = numPing % 2;
+                numPing = temp1 + temp2;
+                numGai = numGai + temp1;
+                count += temp1;
+            }
+            if (numGai >= 4) {
+                int temp1 = numGai / 4;
+                int temp2 = numGai % 4;
+                numPing = numPing + temp1;
+                numGai = temp1 + temp2;
+                count += temp1;
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args) {

@@ -12,22 +12,19 @@ public class String2 {
         if ("".equals(s) || k <= 0) {
             return 0;
         }
-        int[] num = new int[s.length()];
-        for (int i = 0; i < s.length(); i++) {
-            num[i] = s.charAt(i) - 'a';
-        }
-        int i = 0, max = Integer.MIN_VALUE;
-        while (i < 26) {
-            int count = 0, tmp = k;
-            for (int j = 0; j < num.length; j++) {
-                if (num[j] != i && count + Math.abs(num[j] - i) < k) {
-                    count++;
+        int max = 0;
+        for (char i = 'a'; i < 'z'; i++) {
+            int curr = 0;
+            int tmp = k;
+            for (int j = 0; j < 26; j++) {
+                for (int m = 0; m < s.length(); m++) {
+                    if (Math.abs(s.charAt(m) - i) == j && tmp >= j) {
+                        curr++;
+                        tmp -= j;
+                    }
                 }
             }
-            if (count > max) {
-                max = count + 1;
-            }
-            i++;
+            max = Math.max(max, curr);
         }
         return max;
     }
