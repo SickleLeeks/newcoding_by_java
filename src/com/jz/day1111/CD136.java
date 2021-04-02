@@ -34,7 +34,7 @@ public class CD136 {
             arr[0][i] = false;
         }
         // 初始化第0列，此时str是空串，所以只能是
-
+        return false;
     }
 
     private static boolean checkExp(String exp) {
