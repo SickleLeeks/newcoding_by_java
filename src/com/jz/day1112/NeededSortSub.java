@@ -1,4 +1,4 @@
-package com.jz;
+package com.jz.day1112;
 
 import java.io.BufferedReader;
 import java.io.IOException;
