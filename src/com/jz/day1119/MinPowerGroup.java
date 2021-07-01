@@ -1,9 +1,9 @@
-package com.huawei;
+package com.jz.day1119;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Code02 {
+public class MinPowerGroup {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int N = Integer.parseInt(in.nextLine());

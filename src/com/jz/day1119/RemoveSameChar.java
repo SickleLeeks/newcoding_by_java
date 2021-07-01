@@ -1,8 +1,8 @@
-package com.huawei;
+package com.jz.day1119;
 
 import java.util.Scanner;
 
-public class code01 {
+public class RemoveSameChar {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         while (in.hasNextLine()) {

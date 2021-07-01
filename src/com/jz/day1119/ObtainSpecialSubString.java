@@ -1,10 +1,10 @@
-package com.huawei;
+package com.jz.day1119;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Code3 {
+public class ObtainSpecialSubString {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         while (in.hasNextLine()) {
